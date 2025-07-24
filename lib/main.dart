@@ -26,7 +26,7 @@ class TelaInicial extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(title: Text('Exemplos Flutter')),
-      body: Padding(
+      body: Center(child: Padding(
         padding: const EdgeInsets.all(16),
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
@@ -49,7 +49,7 @@ class TelaInicial extends StatelessWidget {
             ),
           ],
         ),
-      ),
+      ),),
     );
   }
 }
