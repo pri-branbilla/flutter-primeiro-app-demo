@@ -9,6 +9,7 @@ class ContadorPage extends StatefulWidget {
 
 class _ContadorPageState extends State<ContadorPage> {
   int contador = 0;
+  List<int> valores = [2, 3, 4, 6];
 
   void _incrementar() {
     setState(() {
@@ -26,10 +27,7 @@ class _ContadorPageState extends State<ContadorPage> {
           children: [
             Text('Você clicou $contador vezes', style: TextStyle(fontSize: 18)),
             SizedBox(height: 20),
-            ElevatedButton(
-              onPressed: _incrementar,
-              child: Text('Clique aqui'),
-            ),
+            ElevatedButton(onPressed: _incrementar, child: Text('Clique aqui')),
           ],
         ),
       ),

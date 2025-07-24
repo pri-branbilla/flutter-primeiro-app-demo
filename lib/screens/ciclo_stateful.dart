@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
 
 class CicloStateful extends StatefulWidget {
-  const CicloStateful({super.key});
+  final Color cor;
+
+  const CicloStateful({super.key, required this.cor});
 
   @override
   State<CicloStateful> createState() => _CicloStatefulState();
@@ -23,7 +25,7 @@ class _CicloStatefulState extends State<CicloStateful> {
   @override
   void didUpdateWidget(covariant CicloStateful oldWidget) {
     super.didUpdateWidget(oldWidget);
-    print('didUpdateWidget: Widget foi atualizado!');
+    print('didUpdateWidget: Propriedade mudou? ${oldWidget.cor != widget.cor}');
   }
 
   @override
@@ -35,13 +37,14 @@ class _CicloStatefulState extends State<CicloStateful> {
   @override
   Widget build(BuildContext context) {
     print('build: Widget reconstruído!');
-    return Scaffold(
-      appBar: AppBar(title: Text('Ciclo de Vida')),
-      body: Center(
+    return Container(
+      height: 150,
+      width: 150,
+      color: widget.cor,
+      child: Center(
         child: Text(
-          'Veja os logs no terminal para acompanhar o ciclo de vida.',
-          textAlign: TextAlign.center,
-          style: TextStyle(fontSize: 16),
+          'Cor atual',
+          style: TextStyle(color: Colors.white),
         ),
       ),
     );

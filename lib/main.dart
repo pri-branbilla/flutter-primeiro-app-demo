@@ -1,8 +1,8 @@
+import 'package:alura_projeto_inicial/screens/ciclo_stateful_parent.dart';
 import 'package:flutter/material.dart';
 import 'screens/widgets_conteudo.dart';
 import 'screens/widgets_layout.dart';
 import 'screens/contador.dart';
-import 'screens/ciclo_stateful.dart';
 
 void main() => runApp(MyApp());
 
@@ -40,12 +40,12 @@ class TelaInicial extends StatelessWidget {
               destino: WidgetsLayout(),
             ),
             BotaoNavegacao(
-              titulo: 'Mudança de Estado - Contador',
-              destino: ContadorPage(),
+              titulo: 'Ciclo de Vida do StatefulWidget',
+              destino: CicloStatefulParent(),
             ),
             BotaoNavegacao(
-              titulo: 'Ciclo de Vida do StatefulWidget',
-              destino: CicloStateful(),
+              titulo: 'Mudança de Estado - Contador',
+              destino: ContadorPage(),
             ),
           ],
         ),
